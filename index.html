@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Cafe </title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="header">
+
+    <div class="left">
+      <a class="linkdin" href="" target="_blank">
+        <li><i class="fa-brands fa-linkedin-in"></i></li>
+      </a>
+      <a href="" target="_blank">
+        <li><i class="fa-brands fa-instagram"></i></li>
+      </a>
+      <a href="" target="_blank">
+        <li><i class="fa-brands fa-facebook"></i></li>
+      </a>
+    </div>
+
+    <div class="center"> <b>FOOD CAFE</b></div>
+
+    <div class="right">
+      <select name="Lang" id="languages" class="dropdown">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Gujrati">Gujrati</option>
+        <option value="Marathi">Marathi</option>
+      </select>
+    </div>
+    <div class="right" onclick="openmenu()">
+
+      <li><i class="fa-regular fa-user"></i></li> </a>
+
+    </div>
+
+  </div>
+  <form class="menuform" action="" onsubmit="validatelogin()" id="hlo">
+    <div class="menu">
+      <h4>LOGIN</h4>
+      <p> <input id="uname" type="text" placeholder="Username" class="login-input"> </p>
+      <p> <input id="upassword" type="password" placeholder="Password" class="login-input"> </p>
+      <input type="submit" value="LogIn">
+    </div>
+  </form>
+
+
+  <!-- NAVBAR  -->
+  <nav>
+    <li onclick="homefunc()"> Home </li>
+    <li onclick="aboutfunc()">About Us </li>
+    <li onclick="servicefunc()">Services</li>
+    <li onclick="galleryfunc()"> Gallery</li>
+    <li onclick="contactfunc()"> Contact Us </li>
+  </nav>
+
+  <!-- <br> -->
+  <div class="navmenu">
+    <div class="homemenu" id="homemenu">
+      <li>Home 1</li>
+      <li>Home 2</li>
+      <li>Home 3</li>
+    </div>
+
+    <div class="aboutmenu" id="aboutmenu">
+      <li>Home 1</li>
+      <li>Home 2</li>
+      <li>Home 3</li>
+    </div>
+
+    <div class="servicemenu" id="servicemenu">
+      <li>About 1</li>
+      <li>About 2</li>
+      <li>About 3</li>
+    </div>
+
+    <div class="gallerymenu" id="gallerymenu">
+      <li>Gallery 1</li>
+      <li>Gallery 2</li>
+      <li>Gallery 3</li>
+    </div>
+
+    <div class="contactmenu" id="contactmenu">
+      <li>Contact 1</li>
+      <li>Contact 2</li>
+      <li>Contact 3</li>
+    </div>
+  </div>
+  <!-- SLIDER -->
+
+  <div class="container">
+    <div class="image-container1">
+      <img src="images/image.jpg" id="content1" class="active">
+      <img src="images/image2.jpg" id="content2">
+      <img src="images/myimage.jpg" id="content3">
+      <img src="images/image2.jpg" id="content4">
+
+    </div>
+    <button id="prev" onclick="prev()"> &lt; </button>
+    <button id="next" onclick="next()"> &gt; </button>
+  </div>
+  <br>
+  <hr>
+
+
+  <!-- IMAGE CHANGE ON BTN CLICK  -->
+  <div class="imgchng">
+    <div class="button-container">
+      <button id="chng1" class="button" onclick="document.getElementById('img').src='images/image2.jpg'">Change
+        1</button>
+      <button id="chng2" class="button" onclick="document.getElementById('img').src='images/myimage.jpg'">Change
+        2</button>
+      <button id="chng3" class="button" onclick="document.getElementById('img').src='images/image.jpg'">Change
+        3</button>
+    </div>
+    <div class="img1">
+      <img id="img" src="images/image.jpg" alt="" srcset="" height="300px">
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+  <div class="button-container1">
+    <button class="button1" onclick="coffeefunc()">Coffe</button>
+    <button class="button1" onclick="colddrinkfunc()">Colddrink</button>
+    <button class="button1" onclick="fastfoodfunc()">Fastfood</button>
+    <button class="button1" onclick="teafunc()">Tea</button>
+    <button class="button1" onclick="allfunc()">All</button>
+  </div>
+
+  <!-- COFEE IMAGES  -->
+
+  <div id="coffee" class="image-container coffee">
+    <div class="image-box">
+      <img src="images/coffee/coffee1.jpeg" alt="Image 1">
+      <div class="image-name">coffee 1</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/coffee/coffee2.jpeg" alt="Image 2">
+      <div class="image-name">coffee 2</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/coffee/coffee3.jpeg" alt="Image 3">
+      <div class="image-name">coffee 3</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/coffee/coffee4.jpeg" alt="Image 4">
+      <div class="image-name">coffee 4</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/coffee/coffee5.jpeg" alt="Image 5">
+      <div class="image-name">coffee 5</div>
+    </div>
+  </div>
+
+  <!-- COLDDRINK IMAGES  -->
+
+  <div id="colddrink" class="image-container colddrink">
+    <div class="image-box">
+      <img src="images/colddrink/colddrink1.jpeg" alt="Image 1">
+      <div class="image-name">colddrink 1</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/colddrink/colddrink2.jpeg" alt="Image 2">
+      <div class="image-name">colddrink 2</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/colddrink/colddrink3.jpeg" alt="Image 3">
+      <div class="image-name">colddrink 3</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/colddrink/colddrink4.jpeg" alt="Image 4">
+      <div class="image-name">colddrink 4</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/colddrink/colddrink5.jpeg" alt="Image 5">
+      <div class="image-name">colddrink 5</div>
+    </div>
+  </div>
+
+  <!-- FASTFOOD IMAGES  -->
+
+  <div id="fastfood" class="image-container fastfood">
+    <div class="image-box">
+      <img src="images/fastfood/fastfood1.jpeg" alt="Image 1">
+      <div class="image-name">fastfood 1</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/fastfood/fastfood2.jpeg" alt="Image 2">
+      <div class="image-name">fastfood 2</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/fastfood/fastfood3.jpeg" alt="Image 3">
+      <div class="image-name">fastfood 3</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/fastfood/fastfood4.jpeg" alt="Image 4">
+      <div class="image-name">fastfood 4</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/fastfood/fastfood5.jpeg" alt="Image 5">
+      <div class="image-name">fastfood 5</div>
+    </div>
+  </div>
+
+  <!-- TEA IMAGES  -->
+
+  <div id="tea" class="image-container tea">
+    <div class="image-box">
+      <img src="images/tea/tea1.jpeg" alt="Image 1">
+      <div class="image-name">Tea 1</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/tea/tea2.jpeg" alt="Image 2">
+      <div class="image-name">Tea 2</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/tea/tea3.jpeg" alt="Image 3">
+      <div class="image-name">Tea 3</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/tea/tea4.jpeg" alt="Image 4">
+      <div class="image-name">Tea 4</div>
+    </div>
+
+    <div class="image-box">
+      <img src="images/tea/tea5.jpeg" alt="Image 5">
+      <div class="image-name">Tea 5</div>
+    </div>
+  </div>
+  <br>
+
+
+  <!-- CONTACT FORM  -->
+  <form name="form" action="" onsubmit="return validateform()">
+    <h3>Get In Touch </h3>
+    <div class="form1">
+
+      <p> <input type="text" name="name" id="name" placeholder="Name"> </p>
+      <span id="namee"></span> <br> <br>
+
+      <p> <input type="email" name="email" id="email" placeholder="Email"> </p>
+      <span id="emaile"></span> <br> <br>
+
+
+      <p> <input type="password" name="password" id="password" placeholder="Password"> </p>
+      <span id="passworde"></span> <br> <br>
+
+
+      <p> <textarea name="message" id="message" cols="20" rows="5" placeholder="Enter Your Messgae"></textarea> </p>
+      <spapn id="messagee"></span> <br> <br>
+
+
+        <p class="formbtn"> <input type="submit" value="submit"></p>
+        <br>
+
+    </div>
+
+  </form>
+  <br>
+  <footer>
+    <div class="btns">
+      <button class="btn">Our Story</button> <br> <br>
+      <button class="btn">Misson</button> <br> <br>
+      <button class="btn">Vision</button> <br> <br>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="index.js"></script>
+
+</html>
